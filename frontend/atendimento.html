@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -88,10 +87,6 @@
     }
 
 
-    /* =================================
-       CONTAINER
-    ================================= */
-
     .container {
 
       width: 100%;
@@ -120,10 +115,6 @@
       position: relative;
     }
 
-
-    /* =================================
-       LAÇOS
-    ================================= */
 
     .container::before,
     .container::after {
@@ -154,10 +145,6 @@
     }
 
 
-    /* =================================
-       ÍCONE
-    ================================= */
-
     .icone {
 
       width: 80px;
@@ -184,10 +171,6 @@
         0 5px 0 #ffc5d8;
     }
 
-
-    /* =================================
-       TÍTULO
-    ================================= */
 
     h2 {
 
@@ -218,10 +201,6 @@
     }
 
 
-    /* =================================
-       FORMULÁRIO
-    ================================= */
-
     .campo {
 
       text-align: left;
@@ -245,13 +224,14 @@
 
 
     input,
-    select {
+    select,
+    textarea {
 
       width: 100%;
 
-      height: 51px;
+      min-height: 51px;
 
-      padding: 0 17px;
+      padding: 13px 17px;
 
       border: 2px solid #ffc1d5;
 
@@ -273,14 +253,24 @@
     }
 
 
-    input::placeholder {
+    textarea {
+
+      min-height: 100px;
+
+      resize: vertical;
+    }
+
+
+    input::placeholder,
+    textarea::placeholder {
 
       color: #d49aad;
     }
 
 
     input:focus,
-    select:focus {
+    select:focus,
+    textarea:focus {
 
       border-color:
         #f36d9a;
@@ -292,10 +282,6 @@
         rgba(243,109,154,.10);
     }
 
-
-    /* =================================
-       CAMPO DE FOTO
-    ================================= */
 
     .foto-box {
 
@@ -339,9 +325,29 @@
     }
 
 
-    /* =================================
-       BOTÃO
-    ================================= */
+    /* SEPARADOR DOS DADOS */
+
+    .secao {
+
+      margin: 25px 0 18px;
+
+      padding: 10px 14px;
+
+      background: #ffe8f1;
+
+      border: 2px solid #ffc4d8;
+
+      border-radius: 15px;
+
+      color: #d83d70;
+
+      font-size: 15px;
+
+      font-weight: 900;
+
+      text-align: left;
+    }
+
 
     button {
 
@@ -408,10 +414,6 @@
     }
 
 
-    /* =================================
-       MENSAGEM
-    ================================= */
-
     #mensagem {
 
       display: none;
@@ -434,10 +436,6 @@
     }
 
 
-    /* =================================
-       RODAPÉ
-    ================================= */
-
     .rodape {
 
       margin-top: 20px;
@@ -455,10 +453,6 @@
       color: #ed477d;
     }
 
-
-    /* =================================
-       RESPONSIVO
-    ================================= */
 
     @media (max-width: 450px) {
 
@@ -496,16 +490,10 @@
 <div class="container">
 
 
-  <!-- ÍCONE -->
-
   <div class="icone">
-
     🏥
-
   </div>
 
-
-  <!-- TÍTULO -->
 
   <h2>
     🎀 Atendimento
@@ -520,23 +508,29 @@
   </div>
 
 
-  <!-- NOME -->
+  <!-- =========================
+       DADOS DO PACIENTE
+  ========================== -->
+
+  <div class="secao">
+    👤 Dados do paciente
+  </div>
+
 
   <div class="campo">
 
     <label>
-      👤 Nome do paciente
+      👤 Nome completo
     </label>
 
     <input
       id="nome"
       placeholder="Digite o nome completo"
+      autocomplete="name"
     >
 
   </div>
 
-
-  <!-- CPF -->
 
   <div class="campo">
 
@@ -548,12 +542,340 @@
       id="cpf"
       placeholder="Digite o CPF"
       maxlength="14"
+      inputmode="numeric"
     >
 
   </div>
 
 
-  <!-- TIPO -->
+  <div class="campo">
+
+    <label>
+      🎂 Data de nascimento
+    </label>
+
+    <input
+      id="nascimento"
+      type="date"
+    >
+
+  </div>
+
+
+  <div class="campo">
+
+    <label>
+      ⚧ Sexo
+    </label>
+
+    <select id="sexo">
+
+      <option value="">
+        Selecione
+      </option>
+
+      <option value="Feminino">
+        👩 Feminino
+      </option>
+
+      <option value="Masculino">
+        👨 Masculino
+      </option>
+
+      <option value="Outro">
+        💗 Outro
+      </option>
+
+      <option value="Nao informado">
+        Prefiro não informar
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <div class="campo">
+
+    <label>
+      💍 Estado civil
+    </label>
+
+    <select id="estadoCivil">
+
+      <option value="">
+        Selecione
+      </option>
+
+      <option value="Solteiro">
+        Solteiro(a)
+      </option>
+
+      <option value="Casado">
+        Casado(a)
+      </option>
+
+      <option value="Divorciado">
+        Divorciado(a)
+      </option>
+
+      <option value="Viuvo">
+        Viúvo(a)
+      </option>
+
+      <option value="Uniao estavel">
+        União estável
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <!-- =========================
+       CONTATO
+  ========================== -->
+
+  <div class="secao">
+    📱 Contato e endereço
+  </div>
+
+
+  <div class="campo">
+
+    <label>
+      📱 Telefone
+    </label>
+
+    <input
+      id="telefone"
+      type="tel"
+      placeholder="(00) 00000-0000"
+    >
+
+  </div>
+
+
+  <div class="campo">
+
+    <label>
+      📧 E-mail
+    </label>
+
+    <input
+      id="email"
+      type="email"
+      placeholder="Digite o e-mail"
+    >
+
+  </div>
+
+
+  <div class="campo">
+
+    <label>
+      🏠 CEP
+    </label>
+
+    <input
+      id="cep"
+      placeholder="00000-000"
+      maxlength="9"
+      inputmode="numeric"
+    >
+
+  </div>
+
+
+  <div class="campo">
+
+    <label>
+      🛣️ Endereço
+    </label>
+
+    <input
+      id="endereco"
+      placeholder="Rua, avenida, etc."
+    >
+
+  </div>
+
+
+  <div class="campo">
+
+    <label>
+      🔢 Número
+    </label>
+
+    <input
+      id="numero"
+      placeholder="Número da residência"
+    >
+
+  </div>
+
+
+  <div class="campo">
+
+    <label>
+      📍 Complemento
+    </label>
+
+    <input
+      id="complemento"
+      placeholder="Apartamento, bloco, casa..."
+    >
+
+  </div>
+
+
+  <div class="campo">
+
+    <label>
+      🌸 Bairro
+    </label>
+
+    <input
+      id="bairro"
+      placeholder="Digite o bairro"
+    >
+
+  </div>
+
+
+  <div class="campo">
+
+    <label>
+      🏙️ Cidade
+    </label>
+
+    <input
+      id="cidade"
+      placeholder="Digite a cidade"
+    >
+
+  </div>
+
+
+  <div class="campo">
+
+    <label>
+      🗺️ Estado
+    </label>
+
+    <select id="estado">
+
+      <option value="">
+        Selecione o estado
+      </option>
+
+      <option>AC</option>
+      <option>AL</option>
+      <option>AP</option>
+      <option>AM</option>
+      <option>BA</option>
+      <option>CE</option>
+      <option>DF</option>
+      <option>ES</option>
+      <option>GO</option>
+      <option>MA</option>
+      <option>MT</option>
+      <option>MS</option>
+      <option>MG</option>
+      <option>PA</option>
+      <option>PB</option>
+      <option>PR</option>
+      <option>PE</option>
+      <option>PI</option>
+      <option>RJ</option>
+      <option>RN</option>
+      <option>RS</option>
+      <option>RO</option>
+      <option>RR</option>
+      <option>SC</option>
+      <option>SP</option>
+      <option>SE</option>
+      <option>TO</option>
+
+    </select>
+
+  </div>
+
+
+  <!-- =========================
+       RESPONSÁVEL
+  ========================== -->
+
+  <div class="secao">
+    👨‍👩‍👧 Responsável / contato de emergência
+  </div>
+
+
+  <div class="campo">
+
+    <label>
+      👥 Nome do responsável
+    </label>
+
+    <input
+      id="responsavel"
+      placeholder="Nome completo do responsável"
+    >
+
+  </div>
+
+
+  <div class="campo">
+
+    <label>
+      🤝 Grau de parentesco
+    </label>
+
+    <select id="parentesco">
+
+      <option value="">
+        Selecione
+      </option>
+
+      <option>Mãe</option>
+      <option>Pai</option>
+      <option>Filho(a)</option>
+      <option>Cônjuge</option>
+      <option>Irmão(ã)</option>
+      <option>Avô/Avó</option>
+      <option>Responsável legal</option>
+      <option>Outro</option>
+
+    </select>
+
+  </div>
+
+
+  <div class="campo">
+
+    <label>
+      📞 Telefone de emergência
+    </label>
+
+    <input
+      id="telefoneEmergencia"
+      type="tel"
+      placeholder="(00) 00000-0000"
+    >
+
+  </div>
+
+
+  <!-- =========================
+       DADOS DO CONVÊNIO
+  ========================== -->
+
+  <div class="secao">
+    💳 Convênio e pagamento
+  </div>
+
+
+  <!-- MANTIDO -->
 
   <div class="campo">
 
@@ -576,7 +898,267 @@
   </div>
 
 
-  <!-- FOTO -->
+  <div class="campo">
+
+    <label>
+      🏥 Nome do convênio
+    </label>
+
+    <input
+      id="convenio"
+      placeholder="Digite o nome do convênio"
+    >
+
+  </div>
+
+
+  <div class="campo">
+
+    <label>
+      💳 Número da carteirinha
+    </label>
+
+    <input
+      id="carteirinha"
+      placeholder="Número da carteirinha"
+    >
+
+  </div>
+
+
+  <div class="campo">
+
+    <label>
+      📅 Validade da carteirinha
+    </label>
+
+    <input
+      id="validadeConvenio"
+      type="date"
+    >
+
+  </div>
+
+
+  <!-- =========================
+       DADOS CLÍNICOS
+  ========================== -->
+
+  <div class="secao">
+    🩺 Informações de saúde
+  </div>
+
+
+  <div class="campo">
+
+    <label>
+      🩸 Tipo sanguíneo
+    </label>
+
+    <select id="tipoSanguineo">
+
+      <option value="">
+        Selecione
+      </option>
+
+      <option>A+</option>
+      <option>A-</option>
+      <option>B+</option>
+      <option>B-</option>
+      <option>AB+</option>
+      <option>AB-</option>
+      <option>O+</option>
+      <option>O-</option>
+      <option>Não informado</option>
+
+    </select>
+
+  </div>
+
+
+  <div class="campo">
+
+    <label>
+      💊 Alergias
+    </label>
+
+    <textarea
+      id="alergias"
+      placeholder="Informe alergias a medicamentos, alimentos ou outras substâncias"
+    ></textarea>
+
+  </div>
+
+
+  <div class="campo">
+
+    <label>
+      💉 Medicamentos em uso
+    </label>
+
+    <textarea
+      id="medicamentos"
+      placeholder="Informe os medicamentos utilizados atualmente"
+    ></textarea>
+
+  </div>
+
+
+  <div class="campo">
+
+    <label>
+      🩺 Doenças / condições preexistentes
+    </label>
+
+    <textarea
+      id="doencas"
+      placeholder="Informe doenças ou condições relevantes"
+    ></textarea>
+
+  </div>
+
+
+  <div class="campo">
+
+    <label>
+      🏥 Histórico cirúrgico
+    </label>
+
+    <textarea
+      id="cirurgias"
+      placeholder="Informe cirurgias anteriores, se houver"
+    ></textarea>
+
+  </div>
+
+
+  <!-- =========================
+       ATENDIMENTO
+  ========================== -->
+
+  <div class="secao">
+    🩷 Dados do atendimento
+  </div>
+
+
+  <div class="campo">
+
+    <label>
+      🚑 Tipo de atendimento
+    </label>
+
+    <select id="especialidade">
+
+      <option value="">
+        Selecione
+      </option>
+
+      <option>Pronto atendimento</option>
+      <option>Consulta médica</option>
+      <option>Pediatria</option>
+      <option>Clínica geral</option>
+      <option>Cardiologia</option>
+      <option>Dermatologia</option>
+      <option>Ginecologia</option>
+      <option>Ortopedia</option>
+      <option>Odontologia</option>
+      <option>Exames</option>
+      <option>Retorno</option>
+      <option>Outro</option>
+
+    </select>
+
+  </div>
+
+
+  <div class="campo">
+
+    <label>
+      🕐 Data do atendimento
+    </label>
+
+    <input
+      id="dataAtendimento"
+      type="date"
+    >
+
+  </div>
+
+
+  <div class="campo">
+
+    <label>
+      🚨 Prioridade
+    </label>
+
+    <select id="prioridade">
+
+      <option value="Normal">
+        💗 Normal
+      </option>
+
+      <option value="Baixa">
+        🩷 Baixa
+      </option>
+
+      <option value="Urgente">
+        🧡 Urgente
+      </option>
+
+      <option value="Emergencia">
+        ❤️ Emergência
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <div class="campo">
+
+    <label>
+      🩺 Motivo da consulta
+    </label>
+
+    <textarea
+      id="motivo"
+      placeholder="Descreva o motivo principal do atendimento"
+    ></textarea>
+
+  </div>
+
+
+  <div class="campo">
+
+    <label>
+      🌡️ Sintomas / queixas
+    </label>
+
+    <textarea
+      id="sintomas"
+      placeholder="Descreva os sintomas ou queixas do paciente"
+    ></textarea>
+
+  </div>
+
+
+  <div class="campo">
+
+    <label>
+      📝 Observações
+    </label>
+
+    <textarea
+      id="observacoes"
+      placeholder="Informações adicionais importantes"
+    ></textarea>
+
+  </div>
+
+
+  <!-- =========================
+       FOTO
+  ========================== -->
 
   <div class="foto-box">
 
@@ -605,16 +1187,12 @@
   </button>
 
 
-  <!-- MENSAGEM -->
-
   <div id="mensagem">
 
     ✅ Paciente enviado para a triagem!
 
   </div>
 
-
-  <!-- RODAPÉ -->
 
   <div class="rodape">
 
@@ -669,6 +1247,112 @@ function cadastrar() {
   }
 
 
+  /*
+    Todos os dados do formulário
+    são reunidos neste objeto.
+  */
+
+  const paciente = {
+
+    nome:
+      document.getElementById("nome").value,
+
+    cpf:
+      document.getElementById("cpf").value,
+
+    nascimento:
+      document.getElementById("nascimento").value,
+
+    sexo:
+      document.getElementById("sexo").value,
+
+    estadoCivil:
+      document.getElementById("estadoCivil").value,
+
+    telefone:
+      document.getElementById("telefone").value,
+
+    email:
+      document.getElementById("email").value,
+
+    cep:
+      document.getElementById("cep").value,
+
+    endereco:
+      document.getElementById("endereco").value,
+
+    numero:
+      document.getElementById("numero").value,
+
+    complemento:
+      document.getElementById("complemento").value,
+
+    bairro:
+      document.getElementById("bairro").value,
+
+    cidade:
+      document.getElementById("cidade").value,
+
+    estado:
+      document.getElementById("estado").value,
+
+    responsavel:
+      document.getElementById("responsavel").value,
+
+    parentesco:
+      document.getElementById("parentesco").value,
+
+    telefoneEmergencia:
+      document.getElementById("telefoneEmergencia").value,
+
+    tipo:
+      document.getElementById("tipo").value,
+
+    convenio:
+      document.getElementById("convenio").value,
+
+    carteirinha:
+      document.getElementById("carteirinha").value,
+
+    validadeConvenio:
+      document.getElementById("validadeConvenio").value,
+
+    tipoSanguineo:
+      document.getElementById("tipoSanguineo").value,
+
+    alergias:
+      document.getElementById("alergias").value,
+
+    medicamentos:
+      document.getElementById("medicamentos").value,
+
+    doencas:
+      document.getElementById("doencas").value,
+
+    cirurgias:
+      document.getElementById("cirurgias").value,
+
+    especialidade:
+      document.getElementById("especialidade").value,
+
+    dataAtendimento:
+      document.getElementById("dataAtendimento").value,
+
+    prioridade:
+      document.getElementById("prioridade").value,
+
+    motivo:
+      document.getElementById("motivo").value,
+
+    sintomas:
+      document.getElementById("sintomas").value,
+
+    observacoes:
+      document.getElementById("observacoes").value
+
+  };
+
+
   fetch(
     "http://localhost:3000/atendimento",
     {
@@ -680,15 +1364,8 @@ function cadastrar() {
           "application/json"
       },
 
-      body: JSON.stringify({
-
-        nome: nome,
-
-        cpf: cpf,
-
-        tipo: tipo
-
-      })
+      body:
+        JSON.stringify(paciente)
 
     }
   )
@@ -697,9 +1374,11 @@ function cadastrar() {
   .then(r => {
 
     if (!r.ok) {
+
       throw new Error(
         "Erro no cadastro"
       );
+
     }
 
     return r.json();
@@ -724,19 +1403,39 @@ function cadastrar() {
     );
 
 
-    document.getElementById(
-      "nome"
-    ).value = "";
+    /*
+      Limpa todos os campos
+      depois do cadastro.
+    */
+
+    document.querySelectorAll(
+      "input, textarea"
+    ).forEach(campo => {
+
+      if (campo.type !== "file") {
+        campo.value = "";
+      }
+
+    });
 
 
-    document.getElementById(
-      "cpf"
-    ).value = "";
+    document.querySelectorAll(
+      "select"
+    ).forEach(select => {
+
+      select.selectedIndex = 0;
+
+    });
 
 
     document.getElementById(
       "tipo"
     ).value = "Convenio";
+
+
+    document.getElementById(
+      "prioridade"
+    ).value = "Normal";
 
 
     document.getElementById(
