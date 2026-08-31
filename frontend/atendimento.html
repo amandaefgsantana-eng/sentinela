@@ -39,7 +39,7 @@ body{
  border-radius:30px;
  box-shadow:0 15px 35px #d65b8438,0 5px 0 #ffb8cf;
  text-align:center;
- position:relative
+ position:relative;
 }
 
 .container:before,
@@ -48,7 +48,7 @@ body{
  position:absolute;
  top:-27px;
  font-size:42px;
- filter:drop-shadow(2px 3px 2px #0002)
+ filter:drop-shadow(2px 3px 2px #0002);
 }
 
 .container:before{left:20px}
@@ -65,7 +65,7 @@ body{
  border:3px solid #ffabc6;
  border-radius:50%;
  font-size:40px;
- box-shadow:0 5px 0 #ffc5d8
+ box-shadow:0 5px 0 #ffc5d8;
 }
 
 h2{
@@ -73,21 +73,21 @@ h2{
  color:#e83f78;
  font-size:27px;
  font-weight:900;
- text-shadow:1px 2px #ffd1e0
+ text-shadow:1px 2px #ffd1e0;
 }
 
 .subtitulo{
  margin:5px 0 25px;
  color:#c97895;
  font-size:13px;
- font-weight:600
+ font-weight:600;
 }
 
 .form-grid{
  display:grid;
  grid-template-columns:1fr 1fr;
  gap:0 15px;
- text-align:left
+ text-align:left;
 }
 
 .secao{
@@ -99,11 +99,11 @@ h2{
  border-radius:15px;
  color:#d83d70;
  font-size:15px;
- font-weight:900
+ font-weight:900;
 }
 
 .campo{
- margin-bottom:13px
+ margin-bottom:13px;
 }
 
 .campo label{
@@ -111,12 +111,10 @@ h2{
  margin:0 0 6px 5px;
  color:#a84968;
  font-size:13px;
- font-weight:800
+ font-weight:800;
 }
 
-input,
-select,
-textarea{
+input,select{
  width:100%;
  min-height:48px;
  padding:11px 15px;
@@ -127,29 +125,18 @@ textarea{
  font-family:'Nunito',sans-serif;
  font-size:14px;
  outline:0;
- transition:.2s
+ transition:.2s;
 }
 
-textarea{
- min-height:85px;
- resize:vertical
-}
-
-input::placeholder,
-textarea::placeholder{
- color:#d49aad
+input::placeholder{
+ color:#d49aad;
 }
 
 input:focus,
-select:focus,
-textarea:focus{
+select:focus{
  border-color:#f36d9a;
  background:#fff;
- box-shadow:0 0 0 4px #f36d9a1a
-}
-
-.full{
- grid-column:1/-1
+ box-shadow:0 0 0 4px #f36d9a1a;
 }
 
 .foto-box{
@@ -158,14 +145,14 @@ textarea:focus{
  border:2px dashed #ffabc6;
  border-radius:17px;
  text-align:left;
- margin:5px 0 18px
+ margin:5px 0 18px;
 }
 
 .foto-titulo{
  color:#d83d70;
  font-size:13px;
  font-weight:800;
- margin-bottom:8px
+ margin-bottom:8px;
 }
 
 .foto-box input{
@@ -173,7 +160,7 @@ textarea:focus{
  padding:8px;
  background:#fff;
  border:1px solid #ffc5d8;
- font-size:13px
+ font-size:13px;
 }
 
 button{
@@ -189,18 +176,17 @@ button{
  font-weight:900;
  cursor:pointer;
  box-shadow:0 5px 0 #bd2859;
- transition:.15s
+ transition:.15s;
 }
 
 button:hover{
  transform:translateY(-2px);
  box-shadow:0 7px 0 #bd2859;
- background:linear-gradient(135deg,#ff5d91,#ed3c76)
 }
 
 button:active{
  transform:translateY(3px);
- box-shadow:0 2px 0 #bd2859
+ box-shadow:0 2px 0 #bd2859;
 }
 
 #mensagem{
@@ -212,43 +198,39 @@ button:active{
  border:2px solid #a6dfb6;
  color:#218838;
  font-size:13px;
- font-weight:800
+ font-weight:800;
 }
 
 .rodape{
  margin-top:20px;
  color:#d28aa2;
  font-size:12px;
- font-weight:600
+ font-weight:600;
 }
 
 .coracao{
- color:#ed477d
+ color:#ed477d;
 }
 
 @media(max-width:650px){
 
  .container{
    max-width:430px;
-   padding:30px 22px 25px
+   padding:30px 22px 25px;
  }
 
  .form-grid{
-   grid-template-columns:1fr
- }
-
- .full{
-   grid-column:auto
+   grid-template-columns:1fr;
  }
 
  h2{
-   font-size:23px
+   font-size:23px;
  }
 
  .icone{
    width:70px;
    height:70px;
-   font-size:34px
+   font-size:34px;
  }
 
 }
@@ -489,54 +471,6 @@ Hospital Hello Kitty • Recepção
 <input id="validadeConvenio" type="date">
 </div>
 
-
-<!-- SAÚDE -->
-
-<div class="secao">
-🩺 Informações de saúde
-</div>
-
-<div class="campo">
-<label>🩸 Tipo sanguíneo</label>
-
-<select id="tipoSanguineo">
-<option value="">Selecione</option>
-<option>A+</option>
-<option>A-</option>
-<option>B+</option>
-<option>B-</option>
-<option>AB+</option>
-<option>AB-</option>
-<option>O+</option>
-<option>O-</option>
-</select>
-
-</div>
-
-<div class="campo">
-<label>💊 Alergias</label>
-<input id="alergias"
-       placeholder="Alergias conhecidas">
-</div>
-
-<div class="campo">
-<label>💉 Medicamentos</label>
-<input id="medicamentos"
-       placeholder="Medicamentos em uso">
-</div>
-
-<div class="campo">
-<label>🩺 Doenças preexistentes</label>
-<input id="doencas"
-       placeholder="Condições de saúde">
-</div>
-
-<div class="campo full">
-<label>🏥 Histórico cirúrgico</label>
-<input id="cirurgias"
-       placeholder="Cirurgias anteriores">
-</div>
-
 </div>
 
 
@@ -554,8 +488,6 @@ Hospital Hello Kitty • Recepção
 
 </div>
 
-
-<!-- BOTÃO -->
 
 <button onclick="cadastrar()">
 💗 Cadastrar Paciente
@@ -599,14 +531,8 @@ const campos=[
 "tipo",
 "convenio",
 "carteirinha",
-"validadeConvenio",
-"tipoSanguineo",
-"alergias",
-"medicamentos",
-"doencas",
-"cirurgias"
+"validadeConvenio"
 ];
-
 
 function cadastrar(){
 
@@ -619,13 +545,11 @@ function cadastrar(){
  if(!cpf)
    return alert("🪪 Digite o CPF do paciente.");
 
-
  const paciente={};
 
  campos.forEach(id=>{
    paciente[id]=document.getElementById(id).value;
  });
-
 
  fetch("http://localhost:3000/atendimento",{
 
@@ -638,7 +562,6 @@ function cadastrar(){
    body:JSON.stringify(paciente)
 
  })
-
  .then(r=>{
 
    if(!r.ok)
@@ -647,33 +570,27 @@ function cadastrar(){
    return r.json();
 
  })
-
  .then(()=>{
 
    document.getElementById("mensagem").style.display="block";
 
    alert("💗 Paciente enviado para triagem!");
 
-
-   document.querySelectorAll("input,textarea").forEach(c=>{
+   document.querySelectorAll("input").forEach(c=>{
 
      if(c.type!=="file")
        c.value="";
 
    });
 
-
    document.querySelectorAll("select").forEach(s=>{
      s.selectedIndex=0;
    });
 
-
    document.getElementById("tipo").value="Convenio";
-
    document.getElementById("foto").value="";
 
  })
-
  .catch(e=>{
 
    console.error(e);
