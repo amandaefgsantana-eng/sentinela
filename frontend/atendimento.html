@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
 <title>Atendimento — Hospital Hello Kitty</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
+
 *{box-sizing:border-box}
 
 body{
- margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
- padding:25px 15px;font-family:'Nunito',sans-serif;
+ margin:0;
+ min-height:100vh;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ padding:25px 15px;
+ font-family:'Nunito',sans-serif;
  background:
  radial-gradient(circle at 10% 15%,#fff 0 4px,transparent 5px),
  radial-gradient(circle at 85% 20%,#fff 0 5px,transparent 6px),
@@ -23,101 +31,228 @@ body{
 }
 
 .container{
- width:100%;max-width:850px;padding:35px 32px 30px;background:#fffffff7;
- border:4px solid #ff9fbe;border-radius:30px;
+ width:100%;
+ max-width:850px;
+ padding:35px 32px 30px;
+ background:#fffffff7;
+ border:4px solid #ff9fbe;
+ border-radius:30px;
  box-shadow:0 15px 35px #d65b8438,0 5px 0 #ffb8cf;
- text-align:center;position:relative
+ text-align:center;
+ position:relative
 }
 
-.container:before,.container:after{
- content:"🎀";position:absolute;top:-27px;font-size:42px;
+.container:before,
+.container:after{
+ content:"🎀";
+ position:absolute;
+ top:-27px;
+ font-size:42px;
  filter:drop-shadow(2px 3px 2px #0002)
 }
-.container:before{left:20px}.container:after{right:20px}
+
+.container:before{left:20px}
+.container:after{right:20px}
 
 .icone{
- width:80px;height:80px;margin:0 auto 15px;display:flex;
- align-items:center;justify-content:center;background:#ffe5ef;
- border:3px solid #ffabc6;border-radius:50%;font-size:40px;
+ width:80px;
+ height:80px;
+ margin:0 auto 15px;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ background:#ffe5ef;
+ border:3px solid #ffabc6;
+ border-radius:50%;
+ font-size:40px;
  box-shadow:0 5px 0 #ffc5d8
 }
 
-h2{margin:0;color:#e83f78;font-size:27px;font-weight:900;text-shadow:1px 2px #ffd1e0}
-.subtitulo{margin:5px 0 25px;color:#c97895;font-size:13px;font-weight:600}
+h2{
+ margin:0;
+ color:#e83f78;
+ font-size:27px;
+ font-weight:900;
+ text-shadow:1px 2px #ffd1e0
+}
+
+.subtitulo{
+ margin:5px 0 25px;
+ color:#c97895;
+ font-size:13px;
+ font-weight:600
+}
 
 .form-grid{
- display:grid;grid-template-columns:1fr 1fr;gap:0 15px;text-align:left
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:0 15px;
+ text-align:left
 }
 
 .secao{
- grid-column:1/-1;margin:22px 0 15px;padding:10px 14px;
- background:#ffe8f1;border:2px solid #ffc4d8;border-radius:15px;
- color:#d83d70;font-size:15px;font-weight:900
+ grid-column:1/-1;
+ margin:22px 0 15px;
+ padding:10px 14px;
+ background:#ffe8f1;
+ border:2px solid #ffc4d8;
+ border-radius:15px;
+ color:#d83d70;
+ font-size:15px;
+ font-weight:900
 }
 
-.campo{margin-bottom:13px}
+.campo{
+ margin-bottom:13px
+}
+
 .campo label{
- display:block;margin:0 0 6px 5px;color:#a84968;font-size:13px;font-weight:800
+ display:block;
+ margin:0 0 6px 5px;
+ color:#a84968;
+ font-size:13px;
+ font-weight:800
 }
 
-input,select,textarea{
- width:100%;min-height:48px;padding:11px 15px;
- border:2px solid #ffc1d5;border-radius:17px;background:#fff8fb;
- color:#8b3b59;font-family:'Nunito',sans-serif;font-size:14px;
- outline:0;transition:.2s
+input,
+select,
+textarea{
+ width:100%;
+ min-height:48px;
+ padding:11px 15px;
+ border:2px solid #ffc1d5;
+ border-radius:17px;
+ background:#fff8fb;
+ color:#8b3b59;
+ font-family:'Nunito',sans-serif;
+ font-size:14px;
+ outline:0;
+ transition:.2s
 }
 
-textarea{min-height:85px;resize:vertical}
-input::placeholder,textarea::placeholder{color:#d49aad}
+textarea{
+ min-height:85px;
+ resize:vertical
+}
 
-input:focus,select:focus,textarea:focus{
- border-color:#f36d9a;background:#fff;
+input::placeholder,
+textarea::placeholder{
+ color:#d49aad
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+ border-color:#f36d9a;
+ background:#fff;
  box-shadow:0 0 0 4px #f36d9a1a
 }
 
-.full{grid-column:1/-1}
-
-.foto-box{
- padding:15px;background:#fff4f8;border:2px dashed #ffabc6;
- border-radius:17px;text-align:left;margin:5px 0 18px
+.full{
+ grid-column:1/-1
 }
 
-.foto-titulo{color:#d83d70;font-size:13px;font-weight:800;margin-bottom:8px}
+.foto-box{
+ padding:15px;
+ background:#fff4f8;
+ border:2px dashed #ffabc6;
+ border-radius:17px;
+ text-align:left;
+ margin:5px 0 18px
+}
+
+.foto-titulo{
+ color:#d83d70;
+ font-size:13px;
+ font-weight:800;
+ margin-bottom:8px
+}
 
 .foto-box input{
- height:auto;padding:8px;background:#fff;border:1px solid #ffc5d8;font-size:13px
+ height:auto;
+ padding:8px;
+ background:#fff;
+ border:1px solid #ffc5d8;
+ font-size:13px
 }
 
 button{
- width:100%;height:53px;margin-top:5px;border:0;border-radius:19px;
- background:linear-gradient(135deg,#f45183,#e93670);color:#fff;
- font-family:'Nunito',sans-serif;font-size:17px;font-weight:900;
- cursor:pointer;box-shadow:0 5px 0 #bd2859;transition:.15s
+ width:100%;
+ height:53px;
+ margin-top:5px;
+ border:0;
+ border-radius:19px;
+ background:linear-gradient(135deg,#f45183,#e93670);
+ color:#fff;
+ font-family:'Nunito',sans-serif;
+ font-size:17px;
+ font-weight:900;
+ cursor:pointer;
+ box-shadow:0 5px 0 #bd2859;
+ transition:.15s
 }
 
 button:hover{
- transform:translateY(-2px);box-shadow:0 7px 0 #bd2859;
+ transform:translateY(-2px);
+ box-shadow:0 7px 0 #bd2859;
  background:linear-gradient(135deg,#ff5d91,#ed3c76)
 }
 
-button:active{transform:translateY(3px);box-shadow:0 2px 0 #bd2859}
+button:active{
+ transform:translateY(3px);
+ box-shadow:0 2px 0 #bd2859
+}
 
 #mensagem{
- display:none;margin-top:18px;padding:12px;border-radius:15px;
- background:#e5f8ec;border:2px solid #a6dfb6;color:#218838;
- font-size:13px;font-weight:800
+ display:none;
+ margin-top:18px;
+ padding:12px;
+ border-radius:15px;
+ background:#e5f8ec;
+ border:2px solid #a6dfb6;
+ color:#218838;
+ font-size:13px;
+ font-weight:800
 }
 
-.rodape{margin-top:20px;color:#d28aa2;font-size:12px;font-weight:600}
-.coracao{color:#ed477d}
+.rodape{
+ margin-top:20px;
+ color:#d28aa2;
+ font-size:12px;
+ font-weight:600
+}
+
+.coracao{
+ color:#ed477d
+}
 
 @media(max-width:650px){
- .container{max-width:430px;padding:30px 22px 25px}
- .form-grid{grid-template-columns:1fr}
- .full{grid-column:auto}
- h2{font-size:23px}
- .icone{width:70px;height:70px;font-size:34px}
+
+ .container{
+   max-width:430px;
+   padding:30px 22px 25px
+ }
+
+ .form-grid{
+   grid-template-columns:1fr
+ }
+
+ .full{
+   grid-column:auto
+ }
+
+ h2{
+   font-size:23px
+ }
+
+ .icone{
+   width:70px;
+   height:70px;
+   font-size:34px
+ }
+
 }
+
 </style>
 </head>
 
@@ -126,22 +261,34 @@ button:active{transform:translateY(3px);box-shadow:0 2px 0 #bd2859}
 <div class="container">
 
 <div class="icone">🏥</div>
+
 <h2>🎀 Atendimento</h2>
-<div class="subtitulo">Hospital Hello Kitty • Recepção</div>
+
+<div class="subtitulo">
+Hospital Hello Kitty • Recepção
+</div>
 
 <div class="form-grid">
 
-<!-- PACIENTE -->
-<div class="secao">👤 Dados do paciente</div>
+<!-- DADOS DO PACIENTE -->
+
+<div class="secao">
+👤 Dados do paciente
+</div>
 
 <div class="campo">
 <label>👤 Nome completo</label>
-<input id="nome" placeholder="Digite o nome completo" autocomplete="name">
+<input id="nome"
+       placeholder="Digite o nome completo"
+       autocomplete="name">
 </div>
 
 <div class="campo">
 <label>🪪 CPF</label>
-<input id="cpf" placeholder="Digite o CPF" maxlength="14" inputmode="numeric">
+<input id="cpf"
+       placeholder="Digite o CPF"
+       maxlength="14"
+       inputmode="numeric">
 </div>
 
 <div class="campo">
@@ -151,6 +298,7 @@ button:active{transform:translateY(3px);box-shadow:0 2px 0 #bd2859}
 
 <div class="campo">
 <label>⚧ Sexo</label>
+
 <select id="sexo">
 <option value="">Selecione</option>
 <option>👩 Feminino</option>
@@ -158,117 +306,182 @@ button:active{transform:translateY(3px);box-shadow:0 2px 0 #bd2859}
 <option>💗 Outro</option>
 <option>Prefiro não informar</option>
 </select>
+
 </div>
 
 <div class="campo">
 <label>💍 Estado civil</label>
+
 <select id="estadoCivil">
 <option value="">Selecione</option>
-<option>Solteiro(a)</option><option>Casado(a)</option>
-<option>Divorciado(a)</option><option>Viúvo(a)</option>
+<option>Solteiro(a)</option>
+<option>Casado(a)</option>
+<option>Divorciado(a)</option>
+<option>Viúvo(a)</option>
 <option>União estável</option>
 </select>
+
 </div>
 
 <div class="campo">
 <label>📱 Telefone</label>
-<input id="telefone" type="tel" placeholder="(00) 00000-0000">
+<input id="telefone"
+       type="tel"
+       placeholder="(00) 00000-0000">
 </div>
 
-<!-- CONTATO -->
-<div class="secao">📱 Contato e endereço</div>
+
+<!-- CONTATO E ENDEREÇO -->
+
+<div class="secao">
+📱 Contato e endereço
+</div>
 
 <div class="campo">
 <label>📧 E-mail</label>
-<input id="email" type="email" placeholder="Digite o e-mail">
+<input id="email"
+       type="email"
+       placeholder="Digite o e-mail">
 </div>
 
 <div class="campo">
 <label>🏠 CEP</label>
-<input id="cep" placeholder="00000-000" maxlength="9">
+<input id="cep"
+       placeholder="00000-000"
+       maxlength="9"
+       inputmode="numeric">
 </div>
 
 <div class="campo">
 <label>🛣️ Endereço</label>
-<input id="endereco" placeholder="Rua, avenida...">
+<input id="endereco"
+       placeholder="Rua, avenida...">
 </div>
 
 <div class="campo">
 <label>🔢 Número</label>
-<input id="numero" placeholder="Número">
+<input id="numero"
+       placeholder="Número">
 </div>
 
 <div class="campo">
 <label>📍 Complemento</label>
-<input id="complemento" placeholder="Apto, bloco, casa...">
+<input id="complemento"
+       placeholder="Apto, bloco, casa...">
 </div>
 
 <div class="campo">
 <label>🌸 Bairro</label>
-<input id="bairro" placeholder="Digite o bairro">
+<input id="bairro"
+       placeholder="Digite o bairro">
 </div>
 
 <div class="campo">
 <label>🏙️ Cidade</label>
-<input id="cidade" placeholder="Digite a cidade">
+<input id="cidade"
+       placeholder="Digite a cidade">
 </div>
 
 <div class="campo">
 <label>🗺️ Estado</label>
+
 <select id="estado">
 <option value="">Selecione</option>
-<option>AC</option><option>AL</option><option>AP</option><option>AM</option>
-<option>BA</option><option>CE</option><option>DF</option><option>ES</option>
-<option>GO</option><option>MA</option><option>MT</option><option>MS</option>
-<option>MG</option><option>PA</option><option>PB</option><option>PR</option>
-<option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
-<option>RS</option><option>RO</option><option>RR</option><option>SC</option>
-<option>SP</option><option>SE</option><option>TO</option>
+<option>AC</option>
+<option>AL</option>
+<option>AP</option>
+<option>AM</option>
+<option>BA</option>
+<option>CE</option>
+<option>DF</option>
+<option>ES</option>
+<option>GO</option>
+<option>MA</option>
+<option>MT</option>
+<option>MS</option>
+<option>MG</option>
+<option>PA</option>
+<option>PB</option>
+<option>PR</option>
+<option>PE</option>
+<option>PI</option>
+<option>RJ</option>
+<option>RN</option>
+<option>RS</option>
+<option>RO</option>
+<option>RR</option>
+<option>SC</option>
+<option>SP</option>
+<option>SE</option>
+<option>TO</option>
 </select>
+
 </div>
 
+
 <!-- RESPONSÁVEL -->
-<div class="secao">👨‍👩‍👧 Responsável / emergência</div>
+
+<div class="secao">
+👨‍👩‍👧 Responsável / emergência
+</div>
 
 <div class="campo">
 <label>👥 Nome do responsável</label>
-<input id="responsavel" placeholder="Nome completo">
+<input id="responsavel"
+       placeholder="Nome completo">
 </div>
 
 <div class="campo">
 <label>🤝 Parentesco</label>
+
 <select id="parentesco">
 <option value="">Selecione</option>
-<option>Mãe</option><option>Pai</option><option>Filho(a)</option>
-<option>Cônjuge</option><option>Irmão(ã)</option><option>Avô/Avó</option>
-<option>Responsável legal</option><option>Outro</option>
+<option>Mãe</option>
+<option>Pai</option>
+<option>Filho(a)</option>
+<option>Cônjuge</option>
+<option>Irmão(ã)</option>
+<option>Avô/Avó</option>
+<option>Responsável legal</option>
+<option>Outro</option>
 </select>
+
 </div>
 
 <div class="campo">
 <label>📞 Telefone de emergência</label>
-<input id="telefoneEmergencia" type="tel" placeholder="(00) 00000-0000">
+<input id="telefoneEmergencia"
+       type="tel"
+       placeholder="(00) 00000-0000">
 </div>
 
+
 <!-- CONVÊNIO -->
-<div class="secao">💳 Convênio e pagamento</div>
+
+<div class="secao">
+💳 Convênio e pagamento
+</div>
 
 <div class="campo">
 <label>💗 Tipo de atendimento</label>
+
 <select id="tipo">
 <option value="Convenio">🩷 Convênio</option>
 <option value="Particular">💕 Particular</option>
 </select>
+
 </div>
 
 <div class="campo">
 <label>🏥 Nome do convênio</label>
-<input id="convenio" placeholder="Nome do convênio">
+<input id="convenio"
+       placeholder="Nome do convênio">
 </div>
 
 <div class="campo">
 <label>💳 Nº da carteirinha</label>
-<input id="carteirinha" placeholder="Número da carteirinha">
+<input id="carteirinha"
+       placeholder="Número da carteirinha">
 </div>
 
 <div class="campo">
@@ -276,117 +489,136 @@ button:active{transform:translateY(3px);box-shadow:0 2px 0 #bd2859}
 <input id="validadeConvenio" type="date">
 </div>
 
+
 <!-- SAÚDE -->
-<div class="secao">🩺 Informações de saúde</div>
+
+<div class="secao">
+🩺 Informações de saúde
+</div>
 
 <div class="campo">
 <label>🩸 Tipo sanguíneo</label>
+
 <select id="tipoSanguineo">
 <option value="">Selecione</option>
-<option>A+</option><option>A-</option><option>B+</option><option>B-</option>
-<option>AB+</option><option>AB-</option><option>O+</option><option>O-</option>
+<option>A+</option>
+<option>A-</option>
+<option>B+</option>
+<option>B-</option>
+<option>AB+</option>
+<option>AB-</option>
+<option>O+</option>
+<option>O-</option>
 </select>
+
 </div>
 
 <div class="campo">
 <label>💊 Alergias</label>
-<input id="alergias" placeholder="Alergias conhecidas">
+<input id="alergias"
+       placeholder="Alergias conhecidas">
 </div>
 
 <div class="campo">
 <label>💉 Medicamentos</label>
-<input id="medicamentos" placeholder="Medicamentos em uso">
+<input id="medicamentos"
+       placeholder="Medicamentos em uso">
 </div>
 
 <div class="campo">
 <label>🩺 Doenças preexistentes</label>
-<input id="doencas" placeholder="Condições de saúde">
+<input id="doencas"
+       placeholder="Condições de saúde">
 </div>
 
 <div class="campo full">
 <label>🏥 Histórico cirúrgico</label>
-<input id="cirurgias" placeholder="Cirurgias anteriores">
-</div>
-
-<!-- ATENDIMENTO -->
-<div class="secao">🩷 Dados do atendimento</div>
-
-<div class="campo">
-<label>🚑 Especialidade</label>
-<select id="especialidade">
-<option value="">Selecione</option>
-<option>Pronto atendimento</option><option>Consulta médica</option>
-<option>Pediatria</option><option>Clínica geral</option><option>Cardiologia</option>
-<option>Dermatologia</option><option>Ginecologia</option><option>Ortopedia</option>
-<option>Odontologia</option><option>Exames</option><option>Retorno</option><option>Outro</option>
-</select>
-</div>
-
-<div class="campo">
-<label>🕐 Data do atendimento</label>
-<input id="dataAtendimento" type="date">
-</div>
-
-<div class="campo">
-<label>🚨 Prioridade</label>
-<select id="prioridade">
-<option value="Normal">💗 Normal</option>
-<option value="Baixa">🩷 Baixa</option>
-<option value="Urgente">🧡 Urgente</option>
-<option value="Emergencia">❤️ Emergência</option>
-</select>
-</div>
-
-<div class="campo">
-<label>🩺 Motivo da consulta</label>
-<input id="motivo" placeholder="Motivo principal">
-</div>
-
-<div class="campo full">
-<label>🌡️ Sintomas / queixas</label>
-<textarea id="sintomas" placeholder="Descreva os sintomas do paciente"></textarea>
-</div>
-
-<div class="campo full">
-<label>📝 Observações</label>
-<textarea id="observacoes" placeholder="Informações adicionais"></textarea>
+<input id="cirurgias"
+       placeholder="Cirurgias anteriores">
 </div>
 
 </div>
+
 
 <!-- FOTO -->
+
 <div class="foto-box">
-<div class="foto-titulo">📷 Foto do paciente</div>
-<input type="file" id="foto" accept="image/*">
+
+<div class="foto-titulo">
+📷 Foto do paciente
 </div>
 
-<button onclick="cadastrar()">💗 Cadastrar Paciente</button>
+<input type="file"
+       id="foto"
+       accept="image/*">
 
-<div id="mensagem">✅ Paciente enviado para a triagem!</div>
+</div>
+
+
+<!-- BOTÃO -->
+
+<button onclick="cadastrar()">
+💗 Cadastrar Paciente
+</button>
+
+
+<div id="mensagem">
+✅ Paciente enviado para a triagem!
+</div>
+
 
 <div class="rodape">
-Cuidando com carinho <span class="coracao">♥</span> Hospital Hello Kitty
+Cuidando com carinho
+<span class="coracao">♥</span>
+Hospital Hello Kitty
 </div>
 
 </div>
+
 
 <script>
+
 const campos=[
-"nome","cpf","nascimento","sexo","estadoCivil","telefone","email","cep",
-"endereco","numero","complemento","bairro","cidade","estado","responsavel",
-"parentesco","telefoneEmergencia","tipo","convenio","carteirinha",
-"validadeConvenio","tipoSanguineo","alergias","medicamentos","doencas",
-"cirurgias","especialidade","dataAtendimento","prioridade","motivo",
-"sintomas","observacoes"
+"nome",
+"cpf",
+"nascimento",
+"sexo",
+"estadoCivil",
+"telefone",
+"email",
+"cep",
+"endereco",
+"numero",
+"complemento",
+"bairro",
+"cidade",
+"estado",
+"responsavel",
+"parentesco",
+"telefoneEmergencia",
+"tipo",
+"convenio",
+"carteirinha",
+"validadeConvenio",
+"tipoSanguineo",
+"alergias",
+"medicamentos",
+"doencas",
+"cirurgias"
 ];
+
 
 function cadastrar(){
 
  const nome=document.getElementById("nome").value.trim();
  const cpf=document.getElementById("cpf").value.trim();
 
- if(!nome)return alert("🎀 Digite o nome do paciente.");
- if(!cpf)return alert("🪪 Digite o CPF do paciente.");
+ if(!nome)
+   return alert("🎀 Digite o nome do paciente.");
+
+ if(!cpf)
+   return alert("🪪 Digite o CPF do paciente.");
+
 
  const paciente={};
 
@@ -394,34 +626,64 @@ function cadastrar(){
    paciente[id]=document.getElementById(id).value;
  });
 
+
  fetch("http://localhost:3000/atendimento",{
+
    method:"POST",
-   headers:{"Content-Type":"application/json"},
+
+   headers:{
+     "Content-Type":"application/json"
+   },
+
    body:JSON.stringify(paciente)
+
  })
+
  .then(r=>{
-   if(!r.ok)throw new Error("Erro no cadastro");
+
+   if(!r.ok)
+     throw new Error("Erro no cadastro");
+
    return r.json();
+
  })
+
  .then(()=>{
+
    document.getElementById("mensagem").style.display="block";
+
    alert("💗 Paciente enviado para triagem!");
 
+
    document.querySelectorAll("input,textarea").forEach(c=>{
-     if(c.type!=="file")c.value="";
+
+     if(c.type!=="file")
+       c.value="";
+
    });
 
-   document.querySelectorAll("select").forEach(s=>s.selectedIndex=0);
+
+   document.querySelectorAll("select").forEach(s=>{
+     s.selectedIndex=0;
+   });
+
 
    document.getElementById("tipo").value="Convenio";
-   document.getElementById("prioridade").value="Normal";
+
    document.getElementById("foto").value="";
+
  })
+
  .catch(e=>{
+
    console.error(e);
+
    alert("❌ Não foi possível cadastrar o paciente.");
+
  });
+
 }
+
 </script>
 
 </body>
